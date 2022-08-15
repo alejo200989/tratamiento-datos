@@ -17,13 +17,15 @@ def search():
     financial_info = search_in_yahoo_finance(ticker=ticker)
     return Response(json.dumps({
         "ticker": ticker,
-        "name": financial_info["quotes"][0]["shortname"],
-        "exchange": financial_info["quotes"][0]["exchange"],
-        "sector": financial_info["quotes"][0]["sector"],
+        "longname": financial_info["quotes"][0]["longname"],
+        "shortname": financial_info["quotes"][0]["shortname"],
         "symbol": financial_info["quotes"][0]["symbol"],
+        "exchange": financial_info["quotes"][0]["exchange"],
+        "exchDisp": financial_info["quotes"][0]["exchDisp"],
+        "sector": financial_info["quotes"][0]["sector"],
         "industry": financial_info["quotes"][0]["industry"],
         "score": financial_info["quotes"][0]["score"],
-        "isYahooFinance": financial_info["quotes"][0]["isYahooFinance"],
+        "isYahooFinance": financial_info["quotes"][0]["isYahooFinance"]
     }), status=200, mimetype="application/json")
 
 
