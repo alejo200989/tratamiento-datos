@@ -33,3 +33,7 @@ def search():
 
     #http://127.0.0.1:5000/api/search/?params=ko
     #carlos_guerrero
+    
+@app.route ("/api/current-price")
+def current_price():
+    return "<p>Hello, current price!</p>"
