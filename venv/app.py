@@ -28,6 +28,7 @@ def search():
         "isYahooFinance": financial_info["quotes"][0]["isYahooFinance"],
         "typeDisp": financial_info["quotes"][0]["typeDisp"],
     }), status=200, mimetype="application/json")
+    #app.run(host='0.0.0.0') //esta linea nos ayudaria que la applicacion funcione con ip del equipo como servidor
 
 
     #http://127.0.0.1:5000/api/search/?params=ko
