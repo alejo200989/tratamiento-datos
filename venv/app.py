@@ -25,7 +25,8 @@ def search():
         "sector": financial_info["quotes"][0]["sector"],
         "industry": financial_info["quotes"][0]["industry"],
         "score": financial_info["quotes"][0]["score"],
-        "isYahooFinance": financial_info["quotes"][0]["isYahooFinance"]
+        "isYahooFinance": financial_info["quotes"][0]["isYahooFinance"],
+        "typeDisp": financial_info["quotes"][0]["typeDisp"],
     }), status=200, mimetype="application/json")
 
 
