@@ -18,13 +18,14 @@ def search():
     return Response(json.dumps({
         "ticker": ticker,
         "longname": financial_info["quotes"][0]["longname"],
+        "name": financial_info["quotes"][0]["shortname"],
         "shortname": financial_info["quotes"][0]["shortname"],
         "symbol": financial_info["quotes"][0]["symbol"],
         "exchange": financial_info["quotes"][0]["exchange"],
+        "score": financial_info["quotes"][0]["score"],
         "exchDisp": financial_info["quotes"][0]["exchDisp"],
         "sector": financial_info["quotes"][0]["sector"],
         "industry": financial_info["quotes"][0]["industry"],
-        "score": financial_info["quotes"][0]["score"],
         "isYahooFinance": financial_info["quotes"][0]["isYahooFinance"],
         "typeDisp": financial_info["quotes"][0]["typeDisp"],
     }), status=200, mimetype="application/json")
@@ -33,6 +34,7 @@ def search():
 
     #http://127.0.0.1:5000/api/search/?params=ko
     #carlos_guerrero
+    #Walter
     
 @app.route ("/api/current-price")
 def current_price():
