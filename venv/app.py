@@ -38,4 +38,5 @@ def search():
     
 @app.route ("/api/current-price")
 def current_price():
-    return "<p>Hello, current price!</p>"
+    return "Hello, Jose Nice 2me2"
+# jose_acosta
